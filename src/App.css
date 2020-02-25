@@ -1,38 +1,150 @@
 .App {
+  padding: 1rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: indianred;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.button-next {
+  background-color: green;
+}
+
+.button-next:hover {
+  background-color: #024402;
+}
+
+button:hover {
+  background-color: #802f2f;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.mt-32 {
+  margin-top: 2rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hidden {
+  display: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 22px;
+}
+
+.options {
+  display: flex;
+  list-style-type: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 0;
+  padding: 0;
+}
+
+.options button {
+  border-radius: 0;
+  border: 3px solid;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.options li {
+  /* margin: 0 1rem; */
+  cursor: pointer;
+  width: 100%;
+  display: none;
+}
+
+.options [data-key] {
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: #333333;
+  padding: 0.5rem 1rem;
+}
+
+.footer a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 500px) {
+  /* .options {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .options li {
+    margin: 0 0 1rem;
+  }
+  .options li:last-of-type {
+    margin-bottom: 0;
+  }
+  .options button {
+    width: 100%;
+  } */
+  .options li {
+    margin: 0;
+    width: 100%;
+  }
+  .options button,
+  .button-next {
+    border-radius: 0;
+    border: 3px solid;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  .App {
+    height: 100vh;
+  }
+  .animal-item {
+    height: 60vh;
+  }
+  .animal-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    margin: 0 auto;
+    display: block;
   }
 }
